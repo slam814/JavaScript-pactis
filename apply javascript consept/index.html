@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- Create a file named timer.html and paste the following code -->
+<html>
+<head>
+  <style>
+    /* Sets the containers height and width */
+    .base-timer {
+      position: relative;
+      height: 300px;
+      width: 300px;
+    }
+
+    /* Removes SVG styling that would hide the time label */
+    .base-timer__circle {
+      fill: none;
+      stroke: none;
+    }
+
+    /* The SVG path that displays the timer's progress */
+    .base-timer__path-elapsed {
+      stroke-width: 7px;
+      stroke: grey;
+    }
+  </style>
+</head>
+<body>
+  <!-- Display the countdown timer in an element -->
+  <div class="base-timer">
+    <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <g class="base-timer__circle">
+        <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45" />
+      </g>
+    </svg>
+    <span id="demo">
+      <!-- Remaining time label -->
+    </span>
+  </div>
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+        
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+        
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+      // Display the result in the element with id="demo"
+      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+        
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
