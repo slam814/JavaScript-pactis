@@ -6,3 +6,4 @@ for(let i = 2; i <= 25; i++){
 }
 
 console.log(fibo);
+// 0,     1,     1,     2,     3, 5,     8,    13
