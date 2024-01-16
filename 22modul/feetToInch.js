@@ -6,6 +6,6 @@ function feetToInch(number){
 }
 
 
-const myFeet = 12;
+const myFeet = ;
 const result = feetToInch(myFeet);
 console.log(result);
