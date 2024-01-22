@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        
+   <section id="salam">
+    <h1>Welcome to Salam Section</h1>
+    <ul>
+        <li>Name: Abdus Salam</li>
+        <li>Age: 25</li>
+        <li>Calss: CSC</li>
+        <li>Section: M-13</li>
+    </ul>
+
+   </section>
+
+    </main>
+
+    <script>
+        const salamContainer = document.getElementById("salam");
+salamContainer.style.backgroundColor = 'green'
+salamContainer.style.padding = '20px'
+salamContainer.style.color = 'red'
+
+salamContainer.classList.add('yellow-bg')
+
+const li2 = document.createElement('li');
+li2.innerText = 'Anither dynamic li';
+placesUL.appendChild(li2);
+    </script>
+</body>
+</html>
