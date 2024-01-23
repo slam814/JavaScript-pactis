@@ -11,7 +11,7 @@
         
    <section id="salam">
     <h1>Welcome to Salam Section</h1>
-    <ul>
+    <ul id="info-list">
         <li>Name: Abdus Salam</li>
         <li>Age: 25</li>
         <li>Calss: CSC</li>
@@ -28,11 +28,25 @@ salamContainer.style.backgroundColor = 'green'
 salamContainer.style.padding = '20px'
 salamContainer.style.color = 'red'
 
-salamContainer.classList.add('yellow-bg')
+const salamLIst = document.getElementById('info-list');
+const li = document.createElement('li');
+li.innerText = 'dalam kalam';
+salamLIst.append(li);
 
 const li2 = document.createElement('li');
-li2.innerText = 'Anither dynamic li';
-placesUL.appendChild(li2);
+li2.innerText = 'kalam balam';
+salamLIst.append(li2);
+
+const li4 = document.createElement('li');
+li4.innerText = 'delam nilam';
+salamLIst.append(li4)
+const li5 = document.createElement('li');
+li5.innerText = 'delam nilam';
+salamLIst.append(li5)
+const li6 = document.createElement('h1');
+li6.innerText = 'delam nilam';
+salamLIst.append(li6)
+
     </script>
 </body>
 </html>
