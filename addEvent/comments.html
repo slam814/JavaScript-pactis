@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Summary</title>
+</head>
+<body>
+    <h1 id="handler-status">Fainal DOM Event Handlers</h1>
+    <button onclick="handleOnClick()">Handle Event By add click Function</button>
+
+    <script>
+        // Option : 1
+        function handleOnClick(){
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Handled by function attached on onclick attribute';
+           
+        }
+
+        // Option : 2
+        document.getElementById('event')
+    </script>
+</body>
+</html>

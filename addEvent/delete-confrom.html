@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="your-info">Your Information</h1>
+    <input id="input-fild" placeholder="Write DELETE" type="text">
+    <button id="btn-delete" disabled>Delete</button>
+
+    <script>
+        document.getElementById('input-fild').addEventListener('keyup', function(event){
+            const text = event.target.value;
+            const deleteConform = document.getElementById('btn-delete');
+            if(text === 'DELETE'){
+                deleteConform.removeAttribute('disabled');
+            }else{
+                deleteConform.setAttribute('disabled', true);
+            }
+        })
+
+        document.getElementById('btn-delete').addEventListener('click', function(){
+            const deleteElement = document.getElementById('your-info');
+            deleteElement.style.display = 'none';
+            const clearInputText =  document.getElementById('input-fild');
+            clearInputText.value = '';
+        })
+    </script>
+
+</body>
+</html>

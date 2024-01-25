@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Babul</title>
+    <style>
+        
+     li{
+        cursor: pointer ;
+     }
+    </style>
+</head>
+<body>
+    <h1>Exploring Event Bubble</h1>
+    <section>
+        <ul id="list-container">
+            <img  class="item" src="2019-06-24.png" alt="">
+
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Sunt, architecto minima!</li>
+            <li class="item">Beatae, saepe. Quia.</li>
+            <li class="item">Explicabo, labore blanditiis?</li>
+            <li class="item">Excepturi, nobis autem!</li>
+            <li class="item">Dicta, illo voluptatem.</li>
+        </ul>
+    </section>
+
+<script>
+   const items = document.getElementsByClassName('item');
+    for(const item of items){
+        item.addEventListener('click', function(){
+            item.addEventListener('click', function(event){
+                
+               event.target.parentNode.removeChild(event.target)
+            })
+        })
+    }
+</script>
+
+</body>
+</html>
