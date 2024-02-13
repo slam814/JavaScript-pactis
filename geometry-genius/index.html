@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title>
+    <!-- CSS Style link add  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Coustom CSS link -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header>
+        <nav class="bg-sky-200 py-4 px-16 flex justify-between items-center mb-5">
+            <div class="">
+                <h1 class="font-extrabold text-4xl">Interactive </h1>
+                <p class="font-bold text-xl">Geometry Genius</p>
+            </div>
+            <button class="px-8 btn btn-primary">Blog</button>
+        </nav>
+    </header>
+
+    <main class="bg-yellow-400 h-20">
+        <!-- Card Shape section  -->
+        <section class="">
+            <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img src="images/triangle.png" alt="Traingle shape " class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Triangle</h2>
+                  <p>Area (A) = 0.5 x b x h</p>
+                  <span><input class="bg-slate-200 w-28  text-center font-semibold" placeholder="b"  type="number" name="" id="bas-fild"> cm 
+                    <input class="bg-slate-200 w-28  text-center font-semibold" placeholder="h" type="number" name="" id="hight-fild"> cm</span>
+                    <div id="triangle-aria" class=""> 
+                        <hr class="h-2">
+                    </div>
+                  <div class="card-actions">
+                    <button id="btn-triangle" class="btn btn-primary">Buy Now</button>
+
+                  </div>
+                </div>
+              </div>
+              
+
+        </section>
+
+    </main>
+    
+
+
+    <script src="js/calculet.js"></script>
+</body>
+</html>
