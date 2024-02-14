@@ -21,6 +21,8 @@ function calculateTriangleArea(){
     addToCalculationEntry('Triangle', area);
 }
 
+
+
 function calculateRectangleArea(){
     // get rectangle width
     const widthField = document.getElementById('rectangle-width')
